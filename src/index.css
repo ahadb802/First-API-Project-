@@ -39,14 +39,14 @@ footer {
   gap: 10px;
 }
 
-.container {
+.cardContainer {
   display: flex;
   gap: 15px;
   margin: 0 50px;
   flex-wrap: wrap;
 }
 
-.container .card {
+.cardContainer .card {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   width: 400px;
   padding: 10px;
@@ -60,24 +60,24 @@ footer img {
   height: 70px;
 }
 
-.container .card img {
+.cardContainer .card img {
   border-radius: 5px;
   width: 100%;
   height: 70%;
 }
 
-.container .card:hover {
+.cardContainer .card:hover {
   box-shadow: 0 24px 32px 0 rgba(252, 228, 228, 0.2);
 }
 
-.container .card .card__body__top {
+.cardContainer .card .card__body__top {
   display: flex;
   justify-content: space-between;
   color: #d57d1f;
   margin: 5px;
 }
 
-.container .card .card__body__buttons {
+.cardContainer .card .card__body__buttons {
   display: flex;
   justify-content: center;
   flex-direction: column;
