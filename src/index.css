@@ -6,11 +6,13 @@
 
 a {
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
 
 body {
   padding: 10px;
+  background: #2d2013;
+  color: #fff;
 }
 
 header {
@@ -37,7 +39,65 @@ footer {
   gap: 10px;
 }
 
+.container {
+  display: flex;
+  gap: 15px;
+  margin: 0 50px;
+  flex-wrap: wrap;
+}
+
+.container .card {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  width: 400px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
 footer img {
   width: 70px;
   height: 70px;
+}
+
+.container .card img {
+  border-radius: 5px;
+  width: 100%;
+  height: 70%;
+}
+
+.container .card:hover {
+  box-shadow: 0 24px 32px 0 rgba(252, 228, 228, 0.2);
+}
+
+.container .card .card__body__top {
+  display: flex;
+  justify-content: space-between;
+  color: #d57d1f;
+  margin: 5px;
+}
+
+.container .card .card__body__buttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.btn {
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 10px;
+  color: #d57d1f;
+  background: #2d2013;
+  transition: all 0.4s;
+}
+
+.btn:hover {
+  color: #ffcb69;
+  background: #472e17;
 }
