@@ -1,4 +1,4 @@
-const detail = (data) => {
+const detail = (data, comments) => {
   const popupContainer = document.createElement('div');
   popupContainer.classList.add('pop-up');
   popupContainer.innerHTML = `
@@ -50,23 +50,20 @@ const detail = (data) => {
         </div>
       </div>
       <div class="comments">
-        <h4>Comments(4)</h4>
+        <h4>Comments(${comments.length ? comments.length : 0})</h4>
         <ul class="comment-list">
-          <li>comment1</li>
-          <li>comment2</li>
-          <li>comment3</li>
-          <li>comment4</li>
         </ul>
         <div class="add-comment-form">
           <h4>Add Comment</h4>
-          <form action="#" method="post" class="comment-form">
-            <input type="text" name="name" placeholder="Your Name" />
-            <textarea name="body" placeholder="Your Insights"></textarea>
+          <form action="#" class="comment-form">
+            <input type="text" name="username" placeholder="Your Name" />
+            <textarea name="comment" placeholder="Your Insights"></textarea>
             <button type="submit" class="btn">Comment</button>
           </form>
         </div>
       </div>
   `;
+
   return popupContainer;
 };
 

@@ -64,6 +64,12 @@ footer img {
   height: 70px;
 }
 
+.image-container img {
+  width: 65%;
+  padding: 15px;
+  border-radius: 50px;
+}
+
 .cardContainer .card img {
   border-radius: 5px;
   width: 100%;
@@ -135,12 +141,6 @@ footer img {
 .image-container {
   display: flex;
   justify-content: center;
-}
-
-.image-container img {
-  width: 65%;
-  padding: 15px;
-  border-radius: 50px;
 }
 
 .pop-up a {
@@ -241,11 +241,7 @@ button[type="submit"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 10px;
+  margin: 10px 10px 10px 10rem;
   padding: 10px;
-}
-
-.comments .comment-list li {
-  margin: 5px;
-  align-self: center;
+  list-style: inside;
 }
