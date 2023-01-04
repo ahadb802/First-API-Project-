@@ -1,23 +1,21 @@
-import microverseLogo from '../../murple_logo.png';
-
-const card = () => {
-  const cardContainer = document.querySelector('.cardContainer');
+const card = (meal) => {
   const cardElement = document.createElement('div');
   cardElement.classList.add('card');
   cardElement.innerHTML = `
-    <img src=${microverseLogo} alt="food-one" />
+    <img src=${meal.strMealThumb} alt="food-one" />
     <div class="card__body">
       <div class="card__body__top">
-        <span>Name of item</span>
-        <span>like button</span>
+        <span>${meal.strMeal}</span>
+        <span class="like-icon">
+          <i class="fa-regular fa-heart fa-2x"></i>
+        </span>
       </div>
       <div class="card__body__buttons">
-        <button class="btn" id="comments">Comments</button>
-        <button class="btn" id="reservations">Reservations</button>
+        <button class="btn comment-btn" id="${meal.idMeal}">Comments</button>
       </div>
     </div>
   `;
-  cardContainer.appendChild(cardElement);
+  return cardElement;
 };
 
 export default card;

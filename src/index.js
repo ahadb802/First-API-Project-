@@ -1,6 +1,6 @@
 import './index.css';
 import pageLayout from './modules/pageLayout.js';
-import card from './modules/card.js';
+import itemList from './modules/itemList.js';
 
 pageLayout();
-card();
+itemList();

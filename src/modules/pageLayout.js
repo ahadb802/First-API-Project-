@@ -9,9 +9,9 @@ const pageLayout = () => {
         <img src=${Logo} alt="logo image" />
       </div>
       <nav class="navbar">
-        <a class="navitems" href="">Home</a>
-        <a class="navitems" href="">Meals</a>
-        <a class="navitems" href="">Contact us</a>
+        <a class="nav-item" href="">Home</a>
+        <a class="nav-item" href="">Meals</a>
+        <a class="nav-item" href="">Contact us</a>
       </nav>
     </header>
 
