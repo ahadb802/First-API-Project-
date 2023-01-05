@@ -245,3 +245,39 @@ button[type="submit"] {
   padding: 10px;
   list-style: inside;
 }
+
+.contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px;
+  padding: 25px;
+}
+
+.contact-us a {
+  font-size: 1.2rem;
+  font-style: italic;
+  display: block;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.contact-us a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.authors {
+  margin-top: 10px;
+}
+
+.authors li {
+  margin: 50px;
+}
+
+.authors span {
+  color: gold;
+  font-size: 1.5rem;
+  margin: 10px;
+}
