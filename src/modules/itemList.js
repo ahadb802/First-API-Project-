@@ -1,4 +1,5 @@
 import card from './card.js';
+import commentCounter from './commentCounter.js';
 import detail from './detail.js';
 import { createComment, getComment } from './fetchInvolvement.js';
 import fetchMealAPI, { fetchSingleMealAPI } from './fetchMealAPI.js';
@@ -17,16 +18,16 @@ const itemList = async () => {
       const comments = await getComment(mealId);
       let popup = null;
       if (!comments) {
-        popup = detail(meal[0], []);
+        popup = detail(meal[0]);
       } else {
-        popup = detail(meal[0], comments);
+        popup = detail(meal[0]);
       }
 
       document.querySelector('#app').appendChild(popup);
 
       const commentListContainer = document.querySelector('.comment-list');
       if (!comments.length) {
-        commentListContainer.innerText = 'No comment';
+        commentListContainer.innerHTML = '<span class="no-comment"> No comment </span>';
       } else {
         comments.forEach((comment) => {
           const commentList = document.createElement('li');
@@ -34,14 +35,25 @@ const itemList = async () => {
           commentListContainer.appendChild(commentList);
         });
       }
+      commentCounter();
 
-      const addCommentForm = document.querySelector('.comment-form');
-      addCommentForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const username = addCommentForm.username.value;
-        const comment = addCommentForm.comment.value;
-        const data = { username, comment, mealId };
-        createComment(data);
+      const addCommentForms = document.querySelectorAll('.comment-form');
+      addCommentForms.forEach((form) => {
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const username = form.username.value;
+          const comment = form.comment.value;
+          const data = { username, comment, mealId };
+          createComment(data).then((res) => {
+            const commentList = document.createElement('li');
+            commentList.innerText = `${res.creation_date}  ${res.username}  ${res.comment}`;
+            commentListContainer.appendChild(commentList);
+            commentCounter();
+            commentListContainer.querySelector('.no-comment').style.display = 'none';
+          });
+          form.username.value = '';
+          form.comment.value = '';
+        });
       });
 
       const closeButtons = document.querySelectorAll('.btn-close');
@@ -49,7 +61,7 @@ const itemList = async () => {
       closeButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
           popups.forEach((popup) => {
-            popup.style.display = 'none';
+            document.querySelector('#app').removeChild(popup);
           });
         });
       });

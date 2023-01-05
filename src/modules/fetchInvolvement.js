@@ -16,7 +16,15 @@ export const createComment = async (data) => {
       }),
     },
   );
-
+  if (response.status === 201) {
+    const date = new Date();
+    const res = {
+      username: data.username,
+      comment: data.comment,
+      creation_date: date.toISOString().split('T')[0],
+    };
+    return res;
+  }
   return response.json();
 };
 
