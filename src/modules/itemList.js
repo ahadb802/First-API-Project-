@@ -31,7 +31,10 @@ const itemList = async () => {
       } else {
         comments.forEach((comment) => {
           const commentList = document.createElement('li');
-          commentList.innerText = `${comment.creation_date}  ${comment.username}  ${comment.comment}`;
+          commentList.innerHTML = `
+            <span class="comment-date"> ${comment.creation_date} </span>
+            <span class="comment-username"> ${comment.username} </span>  
+            <span class="comment-comment">${comment.comment}</span>`;
           commentListContainer.appendChild(commentList);
         });
       }
@@ -46,7 +49,11 @@ const itemList = async () => {
           const data = { username, comment, mealId };
           createComment(data).then((res) => {
             const commentList = document.createElement('li');
-            commentList.innerText = `${res.creation_date}  ${res.username}  ${res.comment}`;
+            commentList.innerHTML = `
+              <span class="comment-date"> ${res.creation_date} </span>
+              <span class="comment-username"> ${res.username} </span>  
+              <span class="comment-comment">${res.comment}</span>
+              `;
             commentListContainer.appendChild(commentList);
             commentCounter();
             commentListContainer.querySelector('.no-comment').style.display = 'none';
