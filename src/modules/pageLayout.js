@@ -10,7 +10,7 @@ const pageLayout = () => {
         <img src=${Logo} alt="logo image" />
       </div>
       <nav class="navbar">
-        <a class="nav-item" href="#" id="meals">Meals</a>
+        <a class="nav-item" href="#" id="meals">Meals(<span class="homeCount"></span>)</a>
         <a class="nav-item" href="#" id="contact-us">Contact us</a>
       </nav>
     </header>

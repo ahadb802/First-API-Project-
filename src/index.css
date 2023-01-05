@@ -46,6 +46,7 @@ footer {
 .cardContainer {
   display: flex;
   gap: 15px;
+  justify-content: center;
   margin: 0 50px;
   flex-wrap: wrap;
 }
@@ -119,6 +120,9 @@ footer img {
 
 .like-icon {
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pop-up {

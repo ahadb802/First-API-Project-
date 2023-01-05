@@ -1,15 +1,37 @@
 import card from './card.js';
 import commentCounter from './commentCounter.js';
 import detail from './detail.js';
-import { createComment, getComment } from './fetchInvolvement.js';
+import {
+  createComment, getComment, getLikes, createLike,
+} from './fetchInvolvement.js';
 import fetchMealAPI, { fetchSingleMealAPI } from './fetchMealAPI.js';
 
+const filterLike = (likes, mealId) => {
+  const filtered = likes.filter((like) => like.item_id === Number(mealId));
+  if (filtered.length) {
+    return filtered[0].likes;
+  }
+  return 0;
+};
 const itemList = async () => {
   const cardContainer = document.querySelector('.cardContainer');
   const meals = await fetchMealAPI();
+  const likes = await getLikes();
   meals.forEach((meal) => {
-    cardContainer.appendChild(card(meal));
+    const mealLikes = filterLike(likes, meal.idMeal);
+    cardContainer.appendChild(card({ ...meal, mealLikes }));
   });
+  const likeBtns = document.querySelectorAll('.like-icon i');
+  likeBtns.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+      let { id } = event.target;
+      id = Number(id.split('-')[1]);
+      createLike(id);
+      const numberOfLikes = btn.nextSibling.nextSibling;
+      numberOfLikes.innerHTML = Number(numberOfLikes.innerHTML) + 1;
+    });
+  });
+
   const commentBtn = document.querySelectorAll('.comment-btn');
   commentBtn.forEach((btn) => {
     btn.addEventListener('click', async (event) => {

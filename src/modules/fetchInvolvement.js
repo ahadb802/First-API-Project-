@@ -43,3 +43,32 @@ export const getComment = async (itemId) => {
   }
   return response.json();
 };
+
+export const createLike = async (itemId) => {
+  const response = await fetch(
+    `${BASEURL}/${ID}/likes`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: {
+        item_id: itemId,
+      },
+    },
+  );
+  return response.json();
+};
+
+export const getLikes = async () => {
+  const response = await fetch(
+    `${BASEURL}/apps/${ID}/likes`,
+    {
+      method: 'GET',
+    },
+  );
+  if (response.status === 404) {
+    return [];
+  }
+  return response.json();
+};
