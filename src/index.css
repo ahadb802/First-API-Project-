@@ -247,7 +247,26 @@ button[type="submit"] {
   justify-content: center;
   margin: 10px 10px 10px 10rem;
   padding: 10px;
-  list-style: inside;
+}
+
+.comment-list li {
+  display: flex;
+  gap: 15px;
+  border-bottom: 0.5px solid #ccc;
+  padding: 5px;
+  margin: 5px;
+}
+
+.comment-list .comment-date {
+  font-size: 14px;
+}
+
+.comment-list .comment-username {
+  font-weight: bold;
+}
+
+.comment-list .comment-comment {
+  font-style: italic;
 }
 
 .contact-us {
