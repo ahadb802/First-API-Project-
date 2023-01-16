@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul li {
+  list-style: none;
+}
+
+body {
+  padding: 10px;
+  background: #2d2013;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+header img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.navbar {
+  display: flex;
+  gap: 50px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cardContainer {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 0 50px;
+  flex-wrap: wrap;
+}
+
+.cardContainer .card {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  width: 400px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+footer img {
+  width: 70px;
+  height: 70px;
+}
+
+.image-container img {
+  width: 65%;
+  padding: 15px;
+  border-radius: 50px;
+}
+
+.cardContainer .card img {
+  border-radius: 5px;
+  width: 100%;
+  height: 70%;
+}
+
+.cardContainer .card:hover {
+  box-shadow: 0 24px 32px 0 rgba(252, 228, 228, 0.2);
+  transform: scale(1.15);
+}
+
+.cardContainer .card .card__body__top {
+  display: flex;
+  justify-content: space-between;
+  color: #d57d1f;
+  margin: 5px;
+}
+
+.cardContainer .card .card__body__buttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.btn {
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 10px;
+  color: #d57d1f;
+  background: #2d2013;
+  transition: all 0.4s;
+}
+
+.btn:hover {
+  color: #ffcb69;
+  background: #472e17;
+}
+
+.fa-heart-o {
+  font-size: 16px;
+}
+
+.like-icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pop-up {
+  position: fixed;
+  top: 100px;
+  left: 60px;
+  bottom: 40px;
+  right: 60px;
+  z-index: 10;
+  overflow-y: scroll;
+  max-width: 60%;
+  margin: 0 auto;
+  background-color: #fff;
+  color: #000;
+  padding: 15px 25px;
+  box-shadow: rgba(#000, 0.25) 0 2px 5px 0;
+  border-radius: 5px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pop-up a {
+  color: blue;
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  background-color: #fff;
+  border: none;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.pop-up h3,
+h4 {
+  text-align: center;
+}
+
+.meal-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 15px;
+  border: 1px solid #000;
+  margin: 15px;
+}
+
+.info {
+  display: flex;
+  gap: 15px;
+}
+
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+
+.info-detail {
+  display: block;
+}
+
+.comment-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  background: #ccc;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #d57d1f;
+  background-color: #2d2013;
+  transition: all 0.4s;
+}
+
+.comments .comment-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 10px 10px 10rem;
+  padding: 10px;
+}
+
+.comment-list li {
+  display: flex;
+  gap: 15px;
+  border-bottom: 0.5px solid #ccc;
+  padding: 5px;
+  margin: 5px;
+}
+
+.comment-list .comment-date {
+  font-size: 14px;
+}
+
+.comment-list .comment-username {
+  font-weight: bold;
+}
+
+.comment-list .comment-comment {
+  font-style: italic;
+}
+
+.contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px;
+  padding: 25px;
+}
+
+.contact-us a {
+  font-size: 1.2rem;
+  font-style: italic;
+  display: block;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.contact-us a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.authors {
+  margin-top: 10px;
+}
+
+.authors li {
+  margin: 50px;
+}
+
+.authors span {
+  color: gold;
+  font-size: 1.5rem;
+  margin: 10px;
+}
