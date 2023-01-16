@@ -91,7 +91,11 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Video Description <a name="video-description"></a>
 
-- [Vidoe Description link](https://drive.google.com/file/d/1X1IQpoP5hUYZR-SxRkqmbyC4FOUQgeEh/view?usp=sharing)
+- [Video Description link](https://drive.google.com/file/d/1X1IQpoP5hUYZR-SxRkqmbyC4FOUQgeEh/view?usp=sharing)
+
+## 🚀 Live Demo <a name="video-description"></a>
+
+- [Click Here link](https://jolly-palmier-ef9b64.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -115,7 +119,7 @@ In order to run this project you need understand basic of the following:
 Clone this repository to your desired folder:
 
 ```sh
-git clone https://github.com/ahadb802/Capstone-project.git
+git clone https://github.com/ahadb802/First-API-Project.git
 cd Capstone-project
 ```
 
@@ -163,9 +167,8 @@ You can deploy this project using: Github page
 
 👤 **Abdul Ahad**
 - GitHub: [@ahadb802](https://github.com/ahadb802)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-- Gmail: [ahadb802](https://github.com/ahadb802)
+- Twitter: [@twitterhandle](https://twitter.com/ahadb802)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdul-ahad-502148186/)
 - Portfolio: [Portfolio](https://ahadb802.github.io/My-Portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
